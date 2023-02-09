@@ -26,7 +26,7 @@ $headingTextShadow: none;
 $headingLetterSpacing: normal;
 $headingTextTransform: none;
 $headingFontWeight: 600;
-$linkColor: #42affa;
+$linkColor: #f0ba3d;
 $linkColorHover: lighten($linkColor, 15%);
 $selectionBackgroundColor: rgba($linkColor, 0.75);
 
@@ -41,3 +41,49 @@ $heading4Size: 1em;
 // Theme template ------------------------------
 @import '../template/theme';
 // ---------------------------------------------
+
+// Custom
+$blockColor: $linkColor;
+$blockSecondColor: #2f9fc1;
+
+.reveal {
+  & .slide-main {
+    position: relative;
+  }
+
+  & .slide-image {
+    max-width: 550px;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  & .slide-block {
+    // background: $linkColor;
+    background-image: linear-gradient(145deg, rgba($blockSecondColor, 1), rgba($blockColor, 1));
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 10px;
+    z-index: 1;
+    position: relative;
+  }
+
+  & .slide-block-info {
+    background: rgba($headingColor, 0.05);
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 45px 5px 5px;
+    border-radius: 10px;
+    margin-top: -40px;
+    z-index: 0;
+    position: relative;
+
+    & p {
+      margin: 15px;
+      line-height: 1;
+    }
+  }
+}
